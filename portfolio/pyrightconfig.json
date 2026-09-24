@@ -1,0 +1,8 @@
+{
+  "venvPath": "..",
+  "venv": "apienv",
+  "extraPaths": [
+    ".",
+    "../apienv/Lib/site-packages"
+  ]
+}

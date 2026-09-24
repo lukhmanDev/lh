@@ -1,0 +1,11 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/apienv/Scripts/python.exe",
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/portfolio",
+    "${workspaceFolder}/apienv/Lib/site-packages"
+  ],
+  "python.autoComplete.extraPaths": [
+    "${workspaceFolder}/portfolio",
+    "${workspaceFolder}/apienv/Lib/site-packages"
+  ]
+}

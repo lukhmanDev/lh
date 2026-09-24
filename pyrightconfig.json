@@ -1,0 +1,17 @@
+{
+  "venvPath": ".",
+  "venv": "apienv",
+  "extraPaths": [
+    "portfolio",
+    "apienv/Lib/site-packages"
+  ],
+  "executionEnvironments": [
+    {
+      "root": "portfolio",
+      "extraPaths": [
+        ".",
+        "../apienv/Lib/site-packages"
+      ]
+    }
+  ]
+}
