@@ -7,5 +7,9 @@
   "python.autoComplete.extraPaths": [
     "${workspaceFolder}/portfolio",
     "${workspaceFolder}/apienv/Lib/site-packages"
-  ]
+  ],
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingTypeStubs": "none"
+  }
 }

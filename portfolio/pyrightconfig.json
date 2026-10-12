@@ -4,5 +4,7 @@
   "extraPaths": [
     ".",
     "../apienv/Lib/site-packages"
-  ]
+  ],
+  "typeCheckingMode": "basic",
+  "reportMissingTypeStubs": "none"
 }

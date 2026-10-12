@@ -5,13 +5,16 @@
     "portfolio",
     "apienv/Lib/site-packages"
   ],
+  "typeCheckingMode": "basic",
+  "reportMissingTypeStubs": "none",
   "executionEnvironments": [
     {
       "root": "portfolio",
       "extraPaths": [
         ".",
         "../apienv/Lib/site-packages"
-      ]
+      ],
+      "reportMissingTypeStubs": "none"
     }
   ]
 }

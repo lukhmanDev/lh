@@ -1,3 +1,5 @@
+from typing import Any
+
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
@@ -7,6 +9,8 @@ from contact.models import ContactMessage
 
 
 class ContactMessageApiTests(APITestCase):
+    client: Any
+
     def test_creates_contact_message(self):
         response = self.client.post(
             reverse('contact-message-create'),
