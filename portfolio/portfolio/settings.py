@@ -48,6 +48,7 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'unfold',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -160,9 +161,71 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'Portfolio Contact API',
-    'DESCRIPTION': 'API for saving portfolio contact messages.',
+    'TITLE': 'Portfolio & Blog API',
+    'DESCRIPTION': 'REST API for portfolio contact messages, blog articles, and categories.',
     'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+}
+
+from django.urls import reverse_lazy
+
+UNFOLD = {
+    'SITE_TITLE': 'Lukman Portfolio & Blog',
+    'SITE_HEADER': 'Lukman Portfolio Admin',
+    'SITE_SUBHEADER': 'Control Center',
+    'SITE_URL': '/',
+    'SITE_SYMBOL': 'speed',
+    'SHOW_HISTORY': True,
+    'SHOW_VIEW_ON_SITE': True,
+    'SIDEBAR': {
+        'show_search': True,
+        'show_all_applications': True,
+        'navigation': [
+            {
+                'title': 'Content Management',
+                'separator': True,
+                'items': [
+                    {
+                        'title': 'Blog Articles',
+                        'icon': 'article',
+                        'link': reverse_lazy('admin:blog_post_changelist'),
+                    },
+                    {
+                        'title': 'Categories',
+                        'icon': 'category',
+                        'link': reverse_lazy('admin:blog_category_changelist'),
+                    },
+                ],
+            },
+            {
+                'title': 'Client Communications',
+                'separator': True,
+                'items': [
+                    {
+                        'title': 'Contact Inquiries',
+                        'icon': 'mail',
+                        'link': reverse_lazy('admin:contact_contactmessage_changelist'),
+                    },
+                ],
+            },
+            {
+                'title': 'Authentication & Access',
+                'separator': True,
+                'items': [
+                    {
+                        'title': 'Users',
+                        'icon': 'people',
+                        'link': reverse_lazy('admin:auth_user_changelist'),
+                    },
+                    {
+                        'title': 'Groups',
+                        'icon': 'group',
+                        'link': reverse_lazy('admin:auth_group_changelist'),
+                    },
+                ],
+            },
+        ],
+    },
 }
 
 

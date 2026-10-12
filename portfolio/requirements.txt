@@ -7,3 +7,5 @@ gunicorn==23.0.0
 psycopg[binary]==3.2.10
 mysqlclient==2.2.7
 whitenoise==6.11.0
+django-unfold==0.109.0
+django-stubs==6.1.2
